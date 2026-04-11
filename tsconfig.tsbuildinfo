@@ -1,0 +1,1 @@
+{"root":["./src/main.ts","./src/types.ts","./src/data/mock.ts","./src/app.vue","./src/components/productionsheet.vue","./src/components/scopeselector.vue","./src/components/sheetview.vue","./vite.config.ts"],"version":"5.9.3"}
