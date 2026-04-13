@@ -1,0 +1,135 @@
+{
+    "id": "69da94434c7d8dfd90fde253",
+    "created": "2026-04-11T18:34:43.636000+00:00",
+    "updated": "2026-04-11T18:34:58.522000+00:00",
+    "deleted": false,
+    "etag": "f569859d8d6572a6ecdb547cc57f5d6f77c0bb4d",
+    "restaurantOrderId": null,
+    "accountId": "6977b54b9bc91e0c7ac45c38",
+    "locationId": "6977b8d86d1470e5d28674c7",
+    "locationName": "Location 3 - Soho",
+    "locationAddress": "278 Bleecker St 10014 New York",
+    "locationTimezone": "America/New_York",
+    "locationContact": {
+      "firstName": "Demo",
+      "lastName": "demo",
+      "email": "demo@deliverect.com",
+      "phoneNumber": "+13016665574"
+    },
+    "channelLinkId": "6978f0e4bffffc7442afe993",
+    "eventName": null,
+    "numberOfGuests": null,
+    "cutoffTime": null,
+    "cateringOrderStatus": 20,
+    "cateringPaymentStatus": 1,
+    "extraInfo": {},
+    "channel": 12024,
+    "channelOrderId": "a185266f-da07-4f62-909c-672c877a4037",
+    "channelOrderDisplayId": "32684003",
+    "orderType": 1,
+    "courier": "restaurant",
+    "items": [
+      {
+        "plu": "P-SO-Lxmf-2",
+        "name": "Southwest Chicken Bowl",
+        "price": 1550,
+        "quantity": 10,
+        "subItems": [
+          {
+            "plu": "M-GR-DlV8-2",
+            "name": "Lemon-tahini dressing",
+            "price": 0,
+            "quantity": 1,
+            "subItems": [],
+            "discountReferenceIds": [],
+            "remark": null
+          },
+          {
+            "plu": "M-CR-tdcA-2",
+            "name": "Creamy garlic-tahini sauce",
+            "price": 0,
+            "quantity": 1,
+            "subItems": [],
+            "discountReferenceIds": [],
+            "remark": null
+          }
+        ],
+        "discountReferenceIds": [
+          1
+        ],
+        "remark": null
+      },
+      {
+        "plu": "P-ME-rPcE-2",
+        "name": "Mediterranean Veggie Sandwich (V)",
+        "price": 1250,
+        "quantity": 10,
+        "subItems": [],
+        "discountReferenceIds": [
+          1
+        ],
+        "remark": "with note"
+      }
+    ],
+    "decimalDigits": 2,
+    "payment": null,
+    "payments": [
+      {
+        "id": "69da944300cf5ebae132f6f7",
+        "externalId": "69da943c6e63678f00c62004",
+        "amount": 29414,
+        "type": 3,
+        "metadata": {
+          "status": "pre_authorized"
+        }
+      }
+    ],
+    "paymentId": null,
+    "subTotal": 28000,
+    "total": 29414,
+    "tip": 0,
+    "customer": {
+      "name": "Sabrina",
+      "companyName": null,
+      "phoneNumber": "+14372254231",
+      "email": "sabrina.civelli@deliverect.com",
+      "customerId": "9fe8744c-f071-4299-ac5d-a92077242161",
+      "loyaltyProviderCustomerId": null,
+      "billingAddress": null
+    },
+    "deliveryTime": null,
+    "pickupTime": "2026-04-15T15:45:00+00:00",
+    "deliveryAsap": false,
+    "deliveryAddress": null,
+    "discounts": [
+      {
+        "type": "order_percent_off",
+        "provider": "restaurant",
+        "programId": "a13a9ba2-6289-4ee5-86e0-25591e0aa495",
+        "name": "GWH5NQ5",
+        "referenceId": 1,
+        "value": 300,
+        "amount": 600,
+        "amountRestaurant": 600,
+        "amountChannel": 0
+      }
+    ],
+    "discountTotal": -600,
+    "table": null,
+    "taxes": [
+      {
+        "name": "GST",
+        "total": 2014
+      }
+    ],
+    "bagFee": 0,
+    "serviceCharge": 0,
+    "serviceChargeTax": 0,
+    "deliveryCost": 0,
+    "deliveryCostTax": 0,
+    "note": "This is an order note | Packaging type - Takeaway",
+    "restaurantNote": null,
+    "orderIsAlreadyPaid": true,
+    "validationId": null,
+    "ReceivedTime": 1775932502.9825208
+  }

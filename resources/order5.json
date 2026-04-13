@@ -1,0 +1,159 @@
+{
+    "id": "69dac6b34c7d8dfd90fde26f",
+    "created": "2026-04-11T22:09:55.925000+00:00",
+    "updated": "2026-04-11T22:10:16.918000+00:00",
+    "deleted": false,
+    "etag": "f5bcae37ccf8deb27093ebf9471761cf5c6019ed",
+    "restaurantOrderId": null,
+    "accountId": "6977b54b9bc91e0c7ac45c38",
+    "locationId": "6977b85198bbc859ada4c183",
+    "locationName": "Location 2 - Manhattan",
+    "locationAddress": "725 5th Ave 10022 New York",
+    "locationTimezone": "America/New_York",
+    "locationContact": {
+      "firstName": "demo",
+      "lastName": "demo",
+      "email": "demo@deliverect.com",
+      "phoneNumber": "+13016665574"
+    },
+    "channelLinkId": "6978f0b2bffffc7442afe483",
+    "eventName": null,
+    "numberOfGuests": null,
+    "cutoffTime": null,
+    "cateringOrderStatus": 20,
+    "cateringPaymentStatus": 1,
+    "extraInfo": {},
+    "channel": 12024,
+    "channelOrderId": "a1857368-57bf-430c-8b50-92af974af3d5",
+    "channelOrderDisplayId": "32683004",
+    "orderType": 2,
+    "courier": "restaurant",
+    "items": [
+      {
+        "plu": "P-GA-DpBK-2",
+        "name": "Garden Fresh Wrap",
+        "price": 749,
+        "quantity": 20,
+        "subItems": [],
+        "discountReferenceIds": [
+          1
+        ],
+        "remark": null
+      },
+      {
+        "plu": "P-CO-GVjg-2",
+        "name": "Coca Cola Can",
+        "price": 300,
+        "quantity": 10,
+        "subItems": [],
+        "discountReferenceIds": [
+          1
+        ],
+        "remark": null
+      },
+      {
+        "plu": "47c48f6a-3bac-5089-8285-0c35ae1451b7",
+        "name": "Avocado Salad Bowl (v)",
+        "price": 1565,
+        "quantity": 10,
+        "subItems": [
+          {
+            "plu": "5c9d38cf-53ab-5dc5-b70d-2346d3fe0568",
+            "name": "Large (3 Proteins)",
+            "price": 290,
+            "quantity": 1,
+            "subItems": [],
+            "discountReferenceIds": [],
+            "remark": null
+          },
+          {
+            "plu": "81581254-ad57-5fd5-b102-69444c9003c7",
+            "name": "Order As Is",
+            "price": 0,
+            "quantity": 1,
+            "subItems": [],
+            "discountReferenceIds": [],
+            "remark": null
+          }
+        ],
+        "discountReferenceIds": [
+          1
+        ],
+        "remark": null
+      }
+    ],
+    "decimalDigits": 2,
+    "payment": null,
+    "payments": [
+      {
+        "id": "69dac6b3d9fdfa4bf99ab7a2",
+        "externalId": "69dac6aebededb77c857e3c4",
+        "amount": 38671,
+        "type": 3,
+        "metadata": {
+          "status": "pre_authorized"
+        }
+      }
+    ],
+    "paymentId": null,
+    "subTotal": 36530,
+    "total": 38671,
+    "tip": 0,
+    "customer": {
+      "name": "Sabrina",
+      "companyName": null,
+      "phoneNumber": "+14372254231",
+      "email": "sabrina.civelli@deliverect.com",
+      "customerId": "9fe8744c-f071-4299-ac5d-a92077242161",
+      "loyaltyProviderCustomerId": null,
+      "billingAddress": null
+    },
+    "deliveryTime": "2026-04-14T22:49:55.921108+00:00",
+    "pickupTime": "2026-04-14T22:24:55.921108+00:00",
+    "deliveryAsap": false,
+    "deliveryAddress": {
+      "source": "725 5th Ave, New York, NY 10022, USA, New York, 10022",
+      "street": null,
+      "streetNumber": null,
+      "area": null,
+      "city": null,
+      "country": null,
+      "postalCode": null,
+      "extraAddressInfo": "",
+      "coordinates": {
+        "latitude": -73.9738842,
+        "longitude": 40.7626218
+      }
+    },
+    "discounts": [
+      {
+        "type": "order_percent_off",
+        "provider": "restaurant",
+        "programId": "a13a9ba2-6289-4ee5-86e0-25591e0aa495",
+        "name": "GWH5NQ5",
+        "referenceId": 1,
+        "value": 300,
+        "amount": 600,
+        "amountRestaurant": 600,
+        "amountChannel": 0
+      }
+    ],
+    "discountTotal": -600,
+    "table": null,
+    "taxes": [
+      {
+        "name": "GST",
+        "total": 2641
+      }
+    ],
+    "bagFee": 0,
+    "serviceCharge": 0,
+    "serviceChargeTax": 0,
+    "deliveryCost": 100,
+    "deliveryCostTax": 0,
+    "note": null,
+    "restaurantNote": null,
+    "orderIsAlreadyPaid": true,
+    "validationId": null,
+    "ReceivedTime": 1775945423.0657945
+  }

@@ -1,0 +1,240 @@
+{
+    "id": "69da8de04c7d8dfd90fde24d",
+    "created": "2026-04-11T18:07:28.881000+00:00",
+    "updated": "2026-04-11T18:10:42.013000+00:00",
+    "deleted": false,
+    "etag": "2748e1c60f8b07cd7e172ecbcef4dae52e14430b",
+    "restaurantOrderId": null,
+    "accountId": "6977b54b9bc91e0c7ac45c38",
+    "locationId": "6977b85198bbc859ada4c183",
+    "locationName": "Location 2 - Manhattan",
+    "locationAddress": "725 5th Ave 10022 New York",
+    "locationTimezone": "America/New_York",
+    "locationContact": {
+      "firstName": "demo",
+      "lastName": "demo",
+      "email": "demo@deliverect.com",
+      "phoneNumber": "+13016665574"
+    },
+    "channelLinkId": "6978f0b2bffffc7442afe483",
+    "eventName": null,
+    "numberOfGuests": null,
+    "cutoffTime": null,
+    "cateringOrderStatus": 20,
+    "cateringPaymentStatus": 1,
+    "extraInfo": {},
+    "channel": 12024,
+    "channelOrderId": "a1851cab-dd75-496b-b3a0-4718cca7c5da",
+    "channelOrderDisplayId": "32683002",
+    "orderType": 1,
+    "courier": "restaurant",
+    "items": [
+      {
+        "plu": "P-FA-k1NP-2",
+        "name": "Falafel & Grain Bowl (V)",
+        "price": 1450,
+        "quantity": 1,
+        "subItems": [],
+        "discountReferenceIds": [
+          1
+        ],
+        "remark": "no red onions"
+      },
+      {
+        "plu": "P-SO-Lxmf-2",
+        "name": "Southwest Chicken Bowl",
+        "price": 1550,
+        "quantity": 1,
+        "subItems": [
+          {
+            "plu": "M-CR-ztSN-2",
+            "name": "Cilantro-Lime Vinaigrette",
+            "price": 0,
+            "quantity": 1,
+            "subItems": [],
+            "discountReferenceIds": [],
+            "remark": null
+          },
+          {
+            "plu": "M-MA-xmi7-2",
+            "name": "Maple-balsamic vinaigrette",
+            "price": 0,
+            "quantity": 1,
+            "subItems": [],
+            "discountReferenceIds": [],
+            "remark": null
+          }
+        ],
+        "discountReferenceIds": [
+          1
+        ],
+        "remark": null
+      },
+      {
+        "plu": "P-GR-v5Jq-2",
+        "name": "Grilled Chicken Pesto Sandwich",
+        "price": 1450,
+        "quantity": 1,
+        "subItems": [],
+        "discountReferenceIds": [
+          1
+        ],
+        "remark": null
+      },
+      {
+        "plu": "47c48f6a-3bac-5089-8285-0c35ae1451b7",
+        "name": "Avocado Salad Bowl (v)",
+        "price": 1565,
+        "quantity": 1,
+        "subItems": [
+          {
+            "plu": "ef03c31e-ac1b-5564-9a2f-d9af193773ab",
+            "name": "Regular (2 Proteins)",
+            "price": 0,
+            "quantity": 1,
+            "subItems": [],
+            "discountReferenceIds": [],
+            "remark": null
+          },
+          {
+            "plu": "eba9e58c-6b26-543b-8bfe-67ee798650e5",
+            "name": "Customize Your Bowl",
+            "price": 0,
+            "quantity": 1,
+            "subItems": [
+              {
+                "plu": "7e53ebf4-4457-509f-87ac-baf906f1bef8",
+                "name": "Burrito",
+                "price": 0,
+                "quantity": 1,
+                "subItems": [],
+                "discountReferenceIds": [],
+                "remark": null
+              },
+              {
+                "plu": "e3d6fe25-d62d-5ba6-af3f-e41119e427da",
+                "name": "Lightly Seared",
+                "price": 0,
+                "quantity": 1,
+                "subItems": [],
+                "discountReferenceIds": [],
+                "remark": null
+              },
+              {
+                "plu": "1c33d2a3-7404-52c4-a6f2-cb2a8ed39f97",
+                "name": "Medium Flavor",
+                "price": 0,
+                "quantity": 1,
+                "subItems": [],
+                "discountReferenceIds": [],
+                "remark": null
+              },
+              {
+                "plu": "b54c8227-fc4b-5b94-8ede-88fafc049c91",
+                "name": "Green Onion",
+                "price": 0,
+                "quantity": 1,
+                "subItems": [],
+                "discountReferenceIds": [],
+                "remark": null
+              },
+              {
+                "plu": "1cf6105a-9cf8-5eb6-bb7b-748570562c3a",
+                "name": "Sesame Seeds",
+                "price": 0,
+                "quantity": 1,
+                "subItems": [],
+                "discountReferenceIds": [],
+                "remark": null
+              },
+              {
+                "plu": "c6b15fb3-248d-5d5f-a037-0204d2b1f315",
+                "name": "Lobster Surimi",
+                "price": 365,
+                "quantity": 1,
+                "subItems": [],
+                "discountReferenceIds": [],
+                "remark": null
+              },
+              {
+                "plu": "b0895a9a-7f54-5c82-a475-f1f60e562d57",
+                "name": "O.G. Shoyu Sauce on the Side",
+                "price": 85,
+                "quantity": 1,
+                "subItems": [],
+                "discountReferenceIds": [],
+                "remark": null
+              }
+            ],
+            "discountReferenceIds": [],
+            "remark": null
+          }
+        ],
+        "discountReferenceIds": [
+          1
+        ],
+        "remark": "Dressing on the side"
+      }
+    ],
+    "decimalDigits": 2,
+    "payment": null,
+    "payments": [
+      {
+        "id": "69da8de00d2c2bd0fe6e1f34",
+        "externalId": "69da8dd63eae099ac00ad8ae",
+        "amount": 6731,
+        "type": 3,
+        "metadata": {
+          "status": "pre_authorized"
+        }
+      }
+    ],
+    "paymentId": null,
+    "subTotal": 6465,
+    "total": 6731,
+    "tip": 0,
+    "customer": {
+      "name": "Sabrina",
+      "companyName": null,
+      "phoneNumber": "+14372254231",
+      "email": "sabrina.civelli@deliverect.com",
+      "customerId": "9fe8744c-f071-4299-ac5d-a92077242161",
+      "loyaltyProviderCustomerId": null,
+      "billingAddress": null
+    },
+    "deliveryTime": null,
+    "pickupTime": "2026-04-16T14:15:00+00:00",
+    "deliveryAsap": false,
+    "deliveryAddress": null,
+    "discounts": [
+      {
+        "type": "order_percent_off",
+        "provider": "restaurant",
+        "programId": "a13a9ba2-6289-4ee5-86e0-25591e0aa495",
+        "name": "GWH5NQ5",
+        "referenceId": 1,
+        "value": 300,
+        "amount": 194,
+        "amountRestaurant": 194,
+        "amountChannel": 0
+      }
+    ],
+    "discountTotal": -194,
+    "table": null,
+    "taxes": [
+      {
+        "name": "GST",
+        "total": 460
+      }
+    ],
+    "bagFee": 0,
+    "serviceCharge": 0,
+    "serviceChargeTax": 0,
+    "deliveryCost": 0,
+    "deliveryCostTax": 0,
+    "note": null,
+    "restaurantNote": null,
+    "orderIsAlreadyPaid": true,
+    "validationId": null,
+    "ReceivedTime": 1775931049.6110194
+  }

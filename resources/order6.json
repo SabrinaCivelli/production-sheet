@@ -1,0 +1,118 @@
+{
+    "id": "69dac88f4c7d8dfd90fde272",
+    "created": "2026-04-11T22:17:51.960000+00:00",
+    "updated": "2026-04-11T22:18:03.940000+00:00",
+    "deleted": false,
+    "etag": "71de30733ffccc5582b4ec64483a2021a2522e15",
+    "restaurantOrderId": null,
+    "accountId": "6977b54b9bc91e0c7ac45c38",
+    "locationId": "6977b85198bbc859ada4c183",
+    "locationName": "Location 2 - Manhattan",
+    "locationAddress": "725 5th Ave 10022 New York",
+    "locationTimezone": "America/New_York",
+    "locationContact": {
+      "firstName": "demo",
+      "lastName": "demo",
+      "email": "demo@deliverect.com",
+      "phoneNumber": "+13016665574"
+    },
+    "channelLinkId": "6978f0b2bffffc7442afe483",
+    "eventName": null,
+    "numberOfGuests": null,
+    "cutoffTime": null,
+    "cateringOrderStatus": 20,
+    "cateringPaymentStatus": 1,
+    "extraInfo": {},
+    "channel": 12024,
+    "channelOrderId": "a185763d-1f08-4787-8dd2-b35cf0f592d0",
+    "channelOrderDisplayId": "32683005",
+    "orderType": 2,
+    "courier": "restaurant",
+    "items": [
+      {
+        "plu": "P-RO-sLLe-2",
+        "name": "Roasted Turkey & Cranberry Wrap",
+        "price": 1300,
+        "quantity": 16,
+        "subItems": [],
+        "discountReferenceIds": [
+          1
+        ],
+        "remark": "no spicy"
+      }
+    ],
+    "decimalDigits": 2,
+    "payment": null,
+    "payments": [
+      {
+        "id": "69dac88fbd2946e26892f1e1",
+        "externalId": "69dac8896204bdc21695281c",
+        "amount": 21785,
+        "type": 3,
+        "metadata": {
+          "status": "pre_authorized"
+        }
+      }
+    ],
+    "paymentId": null,
+    "subTotal": 20800,
+    "total": 21785,
+    "tip": 0,
+    "customer": {
+      "name": "Sabrina",
+      "companyName": null,
+      "phoneNumber": "+14372254231",
+      "email": "sabrina.civelli@deliverect.com",
+      "customerId": "9fe8744c-f071-4299-ac5d-a92077242161",
+      "loyaltyProviderCustomerId": null,
+      "billingAddress": null
+    },
+    "deliveryTime": "2026-04-17T16:45:00+00:00",
+    "pickupTime": "2026-04-17T16:20:00+00:00",
+    "deliveryAsap": false,
+    "deliveryAddress": {
+      "source": "725 5th Ave, New York, NY 10022, USA, New York, 10022",
+      "street": null,
+      "streetNumber": null,
+      "area": null,
+      "city": null,
+      "country": null,
+      "postalCode": null,
+      "extraAddressInfo": null,
+      "coordinates": {
+        "latitude": -73.9738842,
+        "longitude": 40.7626218
+      }
+    },
+    "discounts": [
+      {
+        "type": "order_percent_off",
+        "provider": "restaurant",
+        "programId": "a13a9ba2-6289-4ee5-86e0-25591e0aa495",
+        "name": "GWH5NQ5",
+        "referenceId": 1,
+        "value": 300,
+        "amount": 600,
+        "amountRestaurant": 600,
+        "amountChannel": 0
+      }
+    ],
+    "discountTotal": -600,
+    "table": null,
+    "taxes": [
+      {
+        "name": "GST",
+        "total": 1485
+      }
+    ],
+    "bagFee": 0,
+    "serviceCharge": 0,
+    "serviceChargeTax": 0,
+    "deliveryCost": 100,
+    "deliveryCostTax": 0,
+    "note": null,
+    "restaurantNote": null,
+    "orderIsAlreadyPaid": true,
+    "validationId": null,
+    "ReceivedTime": 1775945890.011292
+  }

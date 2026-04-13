@@ -1,0 +1,265 @@
+{
+    "id": "69dac2b64c7d8dfd90fde25d",
+    "created": "2026-04-11T21:52:54.219000+00:00",
+    "updated": "2026-04-11T21:53:08.448000+00:00",
+    "deleted": false,
+    "etag": "056b4f004bd9387fadca08f91cb7c1eeb296eb2c",
+    "restaurantOrderId": null,
+    "accountId": "6977b54b9bc91e0c7ac45c38",
+    "locationId": "6977b8d86d1470e5d28674c7",
+    "locationName": "Location 3 - Soho",
+    "locationAddress": "278 Bleecker St 10014 New York",
+    "locationTimezone": "America/New_York",
+    "locationContact": {
+      "firstName": "Demo",
+      "lastName": "demo",
+      "email": "demo@deliverect.com",
+      "phoneNumber": "+13016665574"
+    },
+    "channelLinkId": "6978f0e4bffffc7442afe993",
+    "eventName": null,
+    "numberOfGuests": null,
+    "cutoffTime": null,
+    "cateringOrderStatus": 20,
+    "cateringPaymentStatus": 1,
+    "extraInfo": {},
+    "channel": 12024,
+    "channelOrderId": "a1856d4c-823f-4724-96b5-50bfd5144ffd",
+    "channelOrderDisplayId": "32684004",
+    "orderType": 1,
+    "courier": "restaurant",
+    "items": [
+      {
+        "plu": "P-FA-k1NP-2",
+        "name": "Falafel & Grain Bowl (V)",
+        "price": 1450,
+        "quantity": 12,
+        "subItems": [],
+        "discountReferenceIds": [
+          1
+        ],
+        "remark": null
+      },
+      {
+        "plu": "47c48f6a-3bac-5089-8285-0c35ae1451b7",
+        "name": "Avocado Salad Bowl (v)",
+        "price": 1565,
+        "quantity": 10,
+        "subItems": [
+          {
+            "plu": "5c9d38cf-53ab-5dc5-b70d-2346d3fe0568",
+            "name": "Large (3 Proteins)",
+            "price": 290,
+            "quantity": 1,
+            "subItems": [],
+            "discountReferenceIds": [],
+            "remark": null
+          },
+          {
+            "plu": "eba9e58c-6b26-543b-8bfe-67ee798650e5",
+            "name": "Customize Your Bowl",
+            "price": 0,
+            "quantity": 1,
+            "subItems": [
+              {
+                "plu": "16021268-0609-5d10-abdc-264ab918f799",
+                "name": "Bowl",
+                "price": 0,
+                "quantity": 1,
+                "subItems": [],
+                "discountReferenceIds": [],
+                "remark": null
+              },
+              {
+                "plu": "1246ddb8-c72b-5d28-a1c5-1a4e9145672e",
+                "name": "Flamed Cooked",
+                "price": 0,
+                "quantity": 1,
+                "subItems": [],
+                "discountReferenceIds": [],
+                "remark": null
+              },
+              {
+                "plu": "f96a092a-253e-58cb-8dc9-d85b6e922971",
+                "name": "Sliced Onion",
+                "price": 0,
+                "quantity": 1,
+                "subItems": [],
+                "discountReferenceIds": [],
+                "remark": null
+              },
+              {
+                "plu": "8396dbea-c9ec-5d5f-b9ca-dfab740e3cb7",
+                "name": "Cucumber",
+                "price": 0,
+                "quantity": 1,
+                "subItems": [],
+                "discountReferenceIds": [],
+                "remark": null
+              },
+              {
+                "plu": "3fc82894-a9c3-5187-8a4c-8b57c1665458",
+                "name": "Heavy Flavor",
+                "price": 0,
+                "quantity": 1,
+                "subItems": [],
+                "discountReferenceIds": [],
+                "remark": null
+              },
+              {
+                "plu": "1cf6105a-9cf8-5eb6-bb7b-748570562c3a",
+                "name": "Sesame Seeds",
+                "price": 0,
+                "quantity": 1,
+                "subItems": [],
+                "discountReferenceIds": [],
+                "remark": null
+              },
+              {
+                "plu": "b54c8227-fc4b-5b94-8ede-88fafc049c91",
+                "name": "Green Onion",
+                "price": 0,
+                "quantity": 1,
+                "subItems": [],
+                "discountReferenceIds": [],
+                "remark": null
+              },
+              {
+                "plu": "88b81390-a23c-5b94-8735-e9802baad7ab",
+                "name": "Onion Crisps",
+                "price": 0,
+                "quantity": 1,
+                "subItems": [],
+                "discountReferenceIds": [],
+                "remark": null
+              },
+              {
+                "plu": "4f6019f2-b7a5-53fe-8150-4713a9c4e088",
+                "name": "Chicken",
+                "price": 365,
+                "quantity": 1,
+                "subItems": [],
+                "discountReferenceIds": [],
+                "remark": null
+              },
+              {
+                "plu": "7a326b89-e486-5f2d-97de-3010bfcbb4c7",
+                "name": "Tofu (v)",
+                "price": 365,
+                "quantity": 1,
+                "subItems": [],
+                "discountReferenceIds": [],
+                "remark": null
+              },
+              {
+                "plu": "4cbd297d-39c0-5e93-b336-13f82c8e0f89",
+                "name": "Pokeworks Classic on the Side",
+                "price": 85,
+                "quantity": 1,
+                "subItems": [],
+                "discountReferenceIds": [],
+                "remark": null
+              }
+            ],
+            "discountReferenceIds": [],
+            "remark": null
+          }
+        ],
+        "discountReferenceIds": [
+          1
+        ],
+        "remark": null
+      },
+      {
+        "plu": "47c48f6a-3bac-5089-8285-0c35ae1451b7",
+        "name": "Avocado Salad Bowl (v)",
+        "price": 1565,
+        "quantity": 15,
+        "subItems": [
+          {
+            "plu": "ef03c31e-ac1b-5564-9a2f-d9af193773ab",
+            "name": "Regular (2 Proteins)",
+            "price": 0,
+            "quantity": 1,
+            "subItems": [],
+            "discountReferenceIds": [],
+            "remark": null
+          },
+          {
+            "plu": "81581254-ad57-5fd5-b102-69444c9003c7",
+            "name": "Order As Is",
+            "price": 0,
+            "quantity": 1,
+            "subItems": [],
+            "discountReferenceIds": [],
+            "remark": null
+          }
+        ],
+        "discountReferenceIds": [
+          1
+        ],
+        "remark": null
+      }
+    ],
+    "decimalDigits": 2,
+    "payment": null,
+    "payments": [
+      {
+        "id": "69dac2b6a141d06cb57f11f2",
+        "externalId": "69dac2ad74a60d1af9cd668a",
+        "amount": 71898,
+        "type": 3,
+        "metadata": {
+          "status": "pre_authorized"
+        }
+      }
+    ],
+    "paymentId": null,
+    "subTotal": 67575,
+    "total": 71898,
+    "tip": 0,
+    "customer": {
+      "name": "Sabrina",
+      "companyName": null,
+      "phoneNumber": "+14372254231",
+      "email": "sabrina.civelli@deliverect.com",
+      "customerId": "9fe8744c-f071-4299-ac5d-a92077242161",
+      "loyaltyProviderCustomerId": null,
+      "billingAddress": null
+    },
+    "deliveryTime": null,
+    "pickupTime": "2026-04-17T16:15:00+00:00",
+    "deliveryAsap": false,
+    "deliveryAddress": null,
+    "discounts": [
+      {
+        "type": "order_percent_off",
+        "provider": "restaurant",
+        "programId": "a13a9ba2-6289-4ee5-86e0-25591e0aa495",
+        "name": "GWH5NQ5",
+        "referenceId": 1,
+        "value": 300,
+        "amount": 600,
+        "amountRestaurant": 600,
+        "amountChannel": 0
+      }
+    ],
+    "discountTotal": -600,
+    "table": null,
+    "taxes": [
+      {
+        "name": "GST",
+        "total": 4923
+      }
+    ],
+    "bagFee": 0,
+    "serviceCharge": 0,
+    "serviceChargeTax": 0,
+    "deliveryCost": 0,
+    "deliveryCostTax": 0,
+    "note": "Packaging type - Takeaway",
+    "restaurantNote": null,
+    "orderIsAlreadyPaid": true,
+    "validationId": null,
+    "ReceivedTime": 1775944392.571181
+  }

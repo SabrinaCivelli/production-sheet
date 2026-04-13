@@ -7,6 +7,6 @@ build/
 .next/
 .DS_Store
 
-/resources/
+
 /figma-make-export/
 /production-sheet-v2-paper.ARCHIVE.html
