@@ -1,6 +1,7 @@
 import order1Raw from '../../resources/order1.json'
 import order2Raw from '../../resources/order2.json'
 import order3Raw from '../../resources/order3.json'
+import order4Raw from '../../resources/order4.json'
 import order5Raw from '../../resources/order5.json'
 import order6Raw from '../../resources/order6.json'
 
@@ -39,10 +40,13 @@ export interface ItemModifier {
 }
 
 export interface OrderItem {
+  plu: string
   name: string
   /** When set, this item forms a separate aggregation line from items with the same name but different variant. */
   variant?: string
   qty: number
+  /** Unit price in dollars */
+  unitPrice: number
   category: string
   modifiers: ItemModifier[]
   /** Bundled sub-items inside this item (e.g. sandwich inside a boxed lunch). */
@@ -59,12 +63,29 @@ export interface OrderFlags {
   manualReview?: boolean
 }
 
+export interface OrderDiscount {
+  name: string
+  type: string
+  amount: number
+}
+
+export interface OrderTax {
+  name: string
+  amount: number
+}
+
 export interface Order {
   id: string
+  /** ISO timestamp the order was created */
+  created: string
   customer: string
+  customerPhone?: string
+  customerEmail?: string
   /** Legal / billing account name when different from customer. */
   account?: string
   locationId: string
+  locationName: string
+  locationAddress?: string
   type: 'Pickup' | 'Delivery'
   /** ISO date string: YYYY-MM-DD */
   date: string
@@ -72,6 +93,22 @@ export interface Order {
   fulfillmentTime: string
   /** HH:MM for filtering against time windows */
   fulfillmentTimeHHMM: string
+  eventName?: string
+  numberOfGuests?: number
+  cutoffTime?: string
+  /** Subtotal before discounts, in dollars */
+  subTotal: number
+  discountTotal: number
+  discounts: OrderDiscount[]
+  taxes: OrderTax[]
+  tip: number
+  deliveryCost: number
+  /** Total order value in dollars */
+  total: number
+  /** Catering order status label, e.g. "Accepted" */
+  orderStatus: string
+  /** Payment status label, e.g. "Pre-Authorized" */
+  paymentStatus: string
   /** Order-level coordination note. */
   note?: string
   /** Non-standard customer request or exception. */
@@ -102,17 +139,34 @@ interface ApiItem {
 
 interface ApiOrder {
   id: string
+  created: string
   channelOrderDisplayId: string
   locationId: string
   locationName: string
+  locationAddress: string
   orderType: number
   pickupTime: string | null
   deliveryTime: string | null
   note: string | null
   restaurantNote: string | null
+  cateringOrderStatus: number
+  total: number
+  subTotal: number
+  discountTotal: number
+  decimalDigits: number
+  tip: number
+  deliveryCost: number
+  taxes: Array<{ name: string; total: number }>
+  discounts: Array<{ name: string; type: string; amount: number }>
+  payments: Array<{ metadata?: { status: string } }>
+  eventName: string | null
+  numberOfGuests: number | null
+  cutoffTime: string | null
   customer: {
     name: string
     companyName: string | null
+    phoneNumber?: string | null
+    email?: string | null
   }
   items: ApiItem[]
 }
@@ -152,24 +206,72 @@ function parseFulfillmentTime(isoString: string): { date: string; time12: string
   }
 }
 
+const CATERING_STATUS_MAP: Record<number, string> = {
+  10: 'New',
+  20: 'Accepted',
+  30: 'Preparing',
+  40: 'Ready',
+  50: 'Completed',
+  60: 'Cancelled',
+  70: 'Failed',
+  80: 'Expired',
+}
+
+const PAYMENT_STATUS_MAP: Record<string, string> = {
+  pre_authorized: 'Pre-Authorized',
+  captured:       'Captured',
+  failed:         'Failed',
+  refunded:       'Refunded',
+  pending:        'Pending',
+}
+
 function transformApiOrder(raw: ApiOrder): Order {
   const isoTime = raw.pickupTime ?? raw.deliveryTime ?? new Date().toISOString()
   const { date, time12, hhmm } = parseFulfillmentTime(isoTime)
+  const rawPayStatus = raw.payments?.[0]?.metadata?.status ?? ''
+  const dec = raw.decimalDigits ?? 2
+  const factor = Math.pow(10, dec)
 
   return {
     id:                   raw.channelOrderDisplayId,
+    created:              raw.created,
     customer:             raw.customer.name,
+    customerPhone:        raw.customer.phoneNumber ?? undefined,
+    customerEmail:        raw.customer.email ?? undefined,
     account:              raw.customer.companyName ?? undefined,
     locationId:           raw.locationId,
+    locationName:         raw.locationName,
+    locationAddress:      raw.locationAddress ?? undefined,
     type:                 raw.orderType === 1 ? 'Pickup' : 'Delivery',
     date,
     fulfillmentTime:      time12,
     fulfillmentTimeHHMM:  hhmm,
+    eventName:            raw.eventName ?? undefined,
+    numberOfGuests:       raw.numberOfGuests ?? undefined,
+    cutoffTime:           raw.cutoffTime ?? undefined,
+    subTotal:             (raw.subTotal ?? 0) / factor,
+    discountTotal:        (raw.discountTotal ?? 0) / factor,
+    discounts:            (raw.discounts ?? []).map(d => ({
+                            name:   d.name,
+                            type:   d.type,
+                            amount: d.amount / factor,
+                          })),
+    taxes:                (raw.taxes ?? []).map(t => ({
+                            name:   t.name,
+                            amount: t.total / factor,
+                          })),
+    tip:                  (raw.tip ?? 0) / factor,
+    deliveryCost:         (raw.deliveryCost ?? 0) / factor,
+    total:                raw.total / factor,
+    orderStatus:          CATERING_STATUS_MAP[raw.cateringOrderStatus] ?? 'Unknown',
+    paymentStatus:        PAYMENT_STATUS_MAP[rawPayStatus] ?? rawPayStatus,
     note:                 raw.note ?? raw.restaurantNote ?? undefined,
     flags:                {},
     items: raw.items.map(item => ({
+      plu:       item.plu,
       name:      item.name,
       qty:       item.quantity,
+      unitPrice: item.price / factor,
       category:  'Menu Items',
       modifiers: flattenModifiers(item.subItems, item.quantity),
       note:      item.remark ?? undefined,
@@ -196,6 +298,7 @@ export const ORDERS: Order[] = [
   transformApiOrder(order1Raw as unknown as ApiOrder),
   transformApiOrder(order2Raw as unknown as ApiOrder),
   transformApiOrder(order3Raw as unknown as ApiOrder),
+  transformApiOrder(order4Raw as unknown as ApiOrder),
   transformApiOrder(order5Raw as unknown as ApiOrder),
   transformApiOrder(order6Raw as unknown as ApiOrder),
 ]

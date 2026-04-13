@@ -56,7 +56,13 @@
           </button>
 
           <div v-if="cateringOpen" class="nav-children">
-            <button class="nav-child">Order management</button>
+            <button
+              class="nav-child"
+              :class="{ 'nav-child--active': activeView === 'order-management' }"
+              @click="activeView = 'order-management'"
+            >
+              Order management
+            </button>
             <button class="nav-child">Payment Configuration</button>
             <button
               class="nav-child"
@@ -65,7 +71,6 @@
             >
               Production Tools
             </button>
-            <button class="nav-child">Orders</button>
           </div>
         </div>
       </nav>
@@ -73,7 +78,8 @@
 
     <!-- ── Right Content ─────────────────────────────────────────────────── -->
     <main class="content-area">
-      <ProductionSheet v-if="activeView === 'production-tools'" />
+      <OrderManagement v-if="activeView === 'order-management'" />
+      <ProductionSheet v-else-if="activeView === 'production-tools'" />
       <div v-else class="content-empty"></div>
     </main>
   </div>
@@ -82,9 +88,10 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import ProductionSheet from './components/ProductionSheet.vue'
+import OrderManagement from './components/OrderManagement.vue'
 
 const cateringOpen = ref(true)
-const activeView   = ref<'production-tools' | null>(null)
+const activeView   = ref<'order-management' | 'production-tools' | null>(null)
 </script>
 
 <style scoped>
