@@ -6,6 +6,12 @@
     :orders="filteredOrders"
     @back="scope = null"
   />
+  <SheetViewV2
+    v-else-if="scope.sheetType === 'production-v2'"
+    :scope="scope"
+    :orders="filteredOrders"
+    @back="scope = null"
+  />
   <PackSheetView
     v-else
     :scope="scope"
@@ -18,6 +24,7 @@
 import { ref, computed } from 'vue'
 import ScopeSelector from './ScopeSelector.vue'
 import SheetView from './SheetView.vue'
+import SheetViewV2 from './SheetViewV2.vue'
 import PackSheetView from './PackSheetView.vue'
 import { ORDERS, SERVICE_PERIODS } from '../data/mock'
 import type { Order } from '../data/mock'

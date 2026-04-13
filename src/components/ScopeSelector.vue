@@ -183,6 +183,9 @@
           <button class="btn-secondary" @click="generate('pack')">
             Generate Pack Sheet
           </button>
+          <button class="btn-secondary" @click="generate('production-v2')">
+            Production Sheet v2
+          </button>
           <button class="btn-primary" @click="generate('production')">
             Generate Production Sheet
           </button>
@@ -355,7 +358,7 @@ const scopeSummaryText = computed<string>(() =>
 
 // ── Generate ───────────────────────────────────────────────────────────────
 
-function generate(sheetType: 'production' | 'pack') {
+function generate(sheetType: 'production' | 'production-v2' | 'pack') {
   const [from, to] = effectiveDateRange.value
   const n = selectedLocationIds.value.length
   const locationLabel = n === 0

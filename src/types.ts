@@ -12,5 +12,5 @@ export interface Scope {
   locationLabel: string
   summary: string
   generatedAt: Date
-  sheetType: 'production' | 'pack'
+  sheetType: 'production' | 'production-v2' | 'pack'
 }
