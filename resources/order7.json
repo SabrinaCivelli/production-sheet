@@ -1,0 +1,488 @@
+{
+    "_id": "69dd162788ddee9bb9cc5d00",
+    "account": "6977b54b9bc91e0c7ac45c38",
+    "_created": "2026-04-13T16:13:27.045000Z",
+    "_updated": "2026-04-13T16:13:27.472000Z",
+    "_etag": "f998425cd1e948200ed95d3ec345f434aa6e3427",
+    "channelOrderId": "a188f9c5-3661-4948-8eaa-433aef32d79d",
+    "channelOrderDisplayId": "32684005",
+    "location": "6977b8d86d1470e5d28674c7",
+    "channelLink": "6978f0e4bffffc7442afe993",
+    "status": 1,
+    "statusHistory": [
+      {
+        "timeStamp": "2026-04-13T16:13:27.077000Z",
+        "status": 4,
+        "response": "",
+        "source": 2,
+        "eventId": "69dd162788ddee9bb9cc5d02"
+      },
+      {
+        "timeStamp": "2026-04-13T16:13:27.082000Z",
+        "status": 1,
+        "response": "",
+        "source": 5,
+        "eventId": "69dd162788ddee9bb9cc5d17"
+      },
+      {
+        "status": 3,
+        "source": 5,
+        "timeStamp": "2026-04-13T16:13:27.241000Z",
+        "response": "",
+        "eventId": "69dd162788ddee9bb9cc5d2b"
+      }
+    ],
+    "pos": 20000,
+    "posId": "",
+    "posReceiptId": "",
+    "posLocationId": "",
+    "posStatus": 9,
+    "posStatusHistory": [
+      {
+        "timeStamp": "2026-04-13T16:13:27.193000Z",
+        "orderStatus": 1,
+        "posOrderStatus": 9
+      }
+    ],
+    "channel": 12024,
+    "channelStatusHistory": [
+      {
+        "timeStamp": "2026-04-13T16:13:27.471000Z",
+        "channelEvent": 0,
+        "orderStatus": 3,
+        "channelStatus": "",
+        "success": true,
+        "response": "success"
+      }
+    ],
+    "channelOrderRawId": "69dd16263ffc3ef7b42a2444",
+    "channelOrderHistoryRawIds": [
+      "69dd16263ffc3ef7b42a2444"
+    ],
+    "reportingHistory": [],
+    "by": "",
+    "orderType": 1,
+    "note": "Packaging type - Takeaway",
+    "rating": [],
+    "placedTime": "2026-04-13T16:13:27.045000Z",
+    "pickupTime": "2026-04-17T18:15:00.000000Z",
+    "deliveryTime": "2026-04-17T18:30:00.000000Z",
+    "preparationTime": 15,
+    "deliveryIsAsap": false,
+    "courier": {
+      "deliveryBy": "restaurant"
+    },
+    "customer": {
+      "_id": "69dd162788ddee9bb9cc5d15",
+      "hash": "fcf416d1457b2fcf4060fc8f82c2a435ffe4c532b85f9797a4225e689ab1c57a",
+      "name": "Sabrina",
+      "phoneNumber": "+14372254231",
+      "email": "sabrina.civelli@deliverect.com",
+      "note": "",
+      "tin": "",
+      "customerId": "9fe8744c-f071-4299-ac5d-a92077242161",
+      "sendUpdates": true
+    },
+    "customers": [],
+    "deliveryAddress": {
+      "country": "US",
+      "source": "US"
+    },
+    "orderIsAlreadyPaid": true,
+    "packaging": {
+      "includeCutlery": false
+    },
+    "deliveryInfo": {
+      "packageSize": "unknown",
+      "transportType": "unknown",
+      "dropoffType": "unknown"
+    },
+    "items": [
+      {
+        "_id": "69dd162788ddee9bb9cc5d05",
+        "plu": "47c48f6a-3bac-5089-8285-0c35ae1451b7",
+        "name": "Avocado Salad Bowl (v)",
+        "sortOrder": 0,
+        "price": 1565,
+        "quantity": 10,
+        "productType": 1,
+        "remark": "Testing Order note ",
+        "categoryInfo": {},
+        "isInternal": false,
+        "subItems": [
+          {
+            "_id": "69dd162788ddee9bb9cc5d06",
+            "plu": "ef03c31e-ac1b-5564-9a2f-d9af193773ab",
+            "name": "Regular (2 Proteins)",
+            "sortOrder": 0,
+            "price": 0,
+            "quantity": 1,
+            "productType": 2,
+            "categoryInfo": {},
+            "isInternal": false,
+            "subItems": [],
+            "packaging": {
+              "count": 1,
+              "reusable": false,
+              "packedItems": 0
+            },
+            "workstations": [],
+            "discountReferenceIds": [],
+            "productTags": []
+          },
+          {
+            "_id": "69dd162788ddee9bb9cc5d07",
+            "plu": "eba9e58c-6b26-543b-8bfe-67ee798650e5",
+            "name": "Customize Your Bowl",
+            "sortOrder": 0,
+            "price": 0,
+            "quantity": 1,
+            "productType": 2,
+            "categoryInfo": {},
+            "isInternal": false,
+            "subItems": [
+              {
+                "_id": "69dd162788ddee9bb9cc5d08",
+                "plu": "16021268-0609-5d10-abdc-264ab918f799",
+                "name": "Bowl",
+                "sortOrder": 0,
+                "price": 0,
+                "quantity": 1,
+                "productType": 2,
+                "categoryInfo": {},
+                "isInternal": false,
+                "subItems": [],
+                "packaging": {
+                  "count": 1,
+                  "reusable": false,
+                  "packedItems": 0
+                },
+                "workstations": [],
+                "discountReferenceIds": [],
+                "productTags": []
+              },
+              {
+                "_id": "69dd162788ddee9bb9cc5d09",
+                "plu": "1246ddb8-c72b-5d28-a1c5-1a4e9145672e",
+                "name": "Flamed Cooked",
+                "sortOrder": 0,
+                "price": 0,
+                "quantity": 1,
+                "productType": 2,
+                "categoryInfo": {},
+                "isInternal": false,
+                "subItems": [],
+                "packaging": {
+                  "count": 1,
+                  "reusable": false,
+                  "packedItems": 0
+                },
+                "workstations": [],
+                "discountReferenceIds": [],
+                "productTags": []
+              },
+              {
+                "_id": "69dd162788ddee9bb9cc5d0a",
+                "plu": "8396dbea-c9ec-5d5f-b9ca-dfab740e3cb7",
+                "name": "Cucumber",
+                "sortOrder": 0,
+                "price": 0,
+                "quantity": 1,
+                "productType": 2,
+                "categoryInfo": {},
+                "isInternal": false,
+                "subItems": [],
+                "packaging": {
+                  "count": 1,
+                  "reusable": false,
+                  "packedItems": 0
+                },
+                "workstations": [],
+                "discountReferenceIds": [],
+                "productTags": []
+              },
+              {
+                "_id": "69dd162788ddee9bb9cc5d0b",
+                "plu": "ef020356-7783-5342-afa7-ecb261813548",
+                "name": "Edamame",
+                "sortOrder": 0,
+                "price": 0,
+                "quantity": 1,
+                "productType": 2,
+                "categoryInfo": {},
+                "isInternal": false,
+                "subItems": [],
+                "packaging": {
+                  "count": 1,
+                  "reusable": false,
+                  "packedItems": 0
+                },
+                "workstations": [],
+                "discountReferenceIds": [],
+                "productTags": []
+              },
+              {
+                "_id": "69dd162788ddee9bb9cc5d0c",
+                "plu": "1c33d2a3-7404-52c4-a6f2-cb2a8ed39f97",
+                "name": "Medium Flavor",
+                "sortOrder": 0,
+                "price": 0,
+                "quantity": 1,
+                "productType": 2,
+                "categoryInfo": {},
+                "isInternal": false,
+                "subItems": [],
+                "packaging": {
+                  "count": 1,
+                  "reusable": false,
+                  "packedItems": 0
+                },
+                "workstations": [],
+                "discountReferenceIds": [],
+                "productTags": []
+              },
+              {
+                "_id": "69dd162788ddee9bb9cc5d0d",
+                "plu": "36a59519-cc87-51bb-bdbd-32782d759917",
+                "name": "Masago",
+                "sortOrder": 0,
+                "price": 60,
+                "quantity": 1,
+                "productType": 2,
+                "categoryInfo": {},
+                "isInternal": false,
+                "subItems": [],
+                "packaging": {
+                  "count": 1,
+                  "reusable": false,
+                  "packedItems": 0
+                },
+                "workstations": [],
+                "discountReferenceIds": [],
+                "productTags": []
+              },
+              {
+                "_id": "69dd162788ddee9bb9cc5d0e",
+                "plu": "1cf6105a-9cf8-5eb6-bb7b-748570562c3a",
+                "name": "Sesame Seeds",
+                "sortOrder": 0,
+                "price": 0,
+                "quantity": 1,
+                "productType": 2,
+                "categoryInfo": {},
+                "isInternal": false,
+                "subItems": [],
+                "packaging": {
+                  "count": 1,
+                  "reusable": false,
+                  "packedItems": 0
+                },
+                "workstations": [],
+                "discountReferenceIds": [],
+                "productTags": []
+              },
+              {
+                "_id": "69dd162788ddee9bb9cc5d0f",
+                "plu": "4f6019f2-b7a5-53fe-8150-4713a9c4e088",
+                "name": "Chicken",
+                "sortOrder": 0,
+                "price": 365,
+                "quantity": 1,
+                "productType": 2,
+                "categoryInfo": {},
+                "isInternal": false,
+                "subItems": [],
+                "packaging": {
+                  "count": 1,
+                  "reusable": false,
+                  "packedItems": 0
+                },
+                "workstations": [],
+                "discountReferenceIds": [],
+                "productTags": []
+              }
+            ],
+            "packaging": {
+              "count": 1,
+              "reusable": false,
+              "packedItems": 0
+            },
+            "workstations": [],
+            "discountReferenceIds": [],
+            "productTags": []
+          }
+        ],
+        "packaging": {
+          "count": 1,
+          "reusable": false,
+          "packedItems": 0
+        },
+        "workstations": [],
+        "discountReferenceIds": [
+          1
+        ],
+        "productTags": []
+      },
+      {
+        "_id": "69dd162788ddee9bb9cc5d10",
+        "plu": "P-SO-Lxmf-2",
+        "name": "Southwest Chicken Bowl",
+        "sortOrder": 0,
+        "price": 1550,
+        "quantity": 15,
+        "productType": 1,
+        "categoryInfo": {},
+        "isInternal": false,
+        "subItems": [
+          {
+            "_id": "69dd162788ddee9bb9cc5d11",
+            "plu": "M-CR-ztSN-2",
+            "name": "Cilantro-Lime Vinaigrette",
+            "sortOrder": 0,
+            "price": 0,
+            "quantity": 1,
+            "productType": 2,
+            "categoryInfo": {},
+            "isInternal": false,
+            "subItems": [],
+            "packaging": {
+              "count": 1,
+              "reusable": false,
+              "packedItems": 0
+            },
+            "workstations": [],
+            "discountReferenceIds": [],
+            "productTags": []
+          },
+          {
+            "_id": "69dd162788ddee9bb9cc5d12",
+            "plu": "M-MA-xmi7-2",
+            "name": "Maple-balsamic vinaigrette",
+            "sortOrder": 0,
+            "price": 0,
+            "quantity": 1,
+            "productType": 2,
+            "categoryInfo": {},
+            "isInternal": false,
+            "subItems": [],
+            "packaging": {
+              "count": 1,
+              "reusable": false,
+              "packedItems": 0
+            },
+            "workstations": [],
+            "discountReferenceIds": [],
+            "productTags": []
+          }
+        ],
+        "packaging": {
+          "count": 1,
+          "reusable": false,
+          "packedItems": 0
+        },
+        "workstations": [],
+        "discountReferenceIds": [
+          1
+        ],
+        "productTags": [
+          129
+        ]
+      },
+      {
+        "_id": "69dd162788ddee9bb9cc5d13",
+        "plu": "P-CO-GVjg-2",
+        "name": "Coca Cola Can",
+        "sortOrder": 0,
+        "price": 300,
+        "quantity": 25,
+        "productType": 1,
+        "categoryInfo": {},
+        "isInternal": false,
+        "subItems": [],
+        "packaging": {
+          "count": 1,
+          "reusable": false,
+          "packedItems": 0
+        },
+        "workstations": [],
+        "discountReferenceIds": [
+          1
+        ],
+        "productTags": []
+      }
+    ],
+    "taxes": [
+      {
+        "name": "GST",
+        "total": 3679
+      }
+    ],
+    "taxTotal": 3679,
+    "taxRemitted": 0,
+    "payment": {
+      "amount": 53729,
+      "type": 3,
+      "due": 0,
+      "rebate": 0
+    },
+    "payments": [
+      {
+        "id": "69dd1616cd46c674aa7ae479",
+        "type": 3,
+        "externalId": "69dd160d2cda8c5ca938e3f8",
+        "amount": 53729,
+        "metadata": {
+          "status": "pre_authorized"
+        }
+      }
+    ],
+    "decimalDigits": 2,
+    "numberOfCustomers": 0,
+    "serviceCharge": 0,
+    "deliveryCost": 0,
+    "bagFee": 0,
+    "tip": 0,
+    "driverTip": 0,
+    "smallOrderFee": 0,
+    "discountTotal": -600,
+    "discounts": [
+      {
+        "type": "order_percent_off",
+        "provider": "restaurant",
+        "name": "GWH5NQ5",
+        "referenceId": 1,
+        "value": 300,
+        "amount": 600,
+        "amountRestaurant": 600,
+        "amountChannel": 0,
+        "programId": "a13a9ba2-6289-4ee5-86e0-25591e0aa495"
+      }
+    ],
+    "historyDriverUpdates": [],
+    "courierUpdateHistory": [
+      {
+        "status": 81,
+        "received": "2026-04-13T16:13:27.082000Z",
+        "courier": {},
+        "arrivalTime": "2026-04-17T18:15:00.000000Z",
+        "source": 5
+      }
+    ],
+    "deliveryJobIds": [],
+    "deliverySystems": [],
+    "failedDeliverySystems": [],
+    "recent": true,
+    "resolvedBy": "",
+    "brandId": "6977b54b9bc91e0c7ac45c39",
+    "timezone": "America/New_York",
+    "date": 20260414,
+    "fixedCost": 0,
+    "ageCheck": false,
+    "_links": {
+      "self": {
+        "title": "order",
+        "href": "evefind/orders/69dd162788ddee9bb9cc5d00"
+      }
+    },
+    "locationName": "Location 3 - Soho"
+  }

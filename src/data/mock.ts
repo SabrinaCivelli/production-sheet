@@ -4,6 +4,7 @@ import order3Raw from '../../resources/order3.json'
 import order4Raw from '../../resources/order4.json'
 import order5Raw from '../../resources/order5.json'
 import order6Raw from '../../resources/order6.json'
+import order7Raw from '../../resources/order7.json'
 
 // ── Types ──────────────────────────────────────────────────────────────────
 
@@ -279,6 +280,89 @@ function transformApiOrder(raw: ApiOrder): Order {
   }
 }
 
+// ── API v2 (alternate schema used by order7+) ──────────────────────────────
+
+interface ApiOrderV2 {
+  _created: string
+  channelOrderDisplayId: string
+  location: string           // locationId
+  locationName: string
+  orderType: number
+  pickupTime: string | null
+  deliveryTime: string | null
+  note: string | null
+  status: number
+  payment: { amount: number } | null
+  payments: Array<{ amount?: number; metadata?: { status: string } }>
+  decimalDigits: number
+  taxTotal: number
+  discountTotal: number
+  discounts: Array<{ name: string; type: string; amount: number }>
+  taxes: Array<{ name: string; total: number }>
+  tip: number
+  deliveryCost: number
+  customer: {
+    name: string
+    phoneNumber?: string | null
+    email?: string | null
+  }
+  items: ApiItem[]
+}
+
+const V2_STATUS_MAP: Record<number, string> = {
+  1: 'Accepted',
+  2: 'New',
+  3: 'Preparing',
+  4: 'Ready',
+  5: 'Completed',
+  6: 'Cancelled',
+  7: 'Failed',
+}
+
+function transformApiOrderV2(raw: ApiOrderV2): Order {
+  const isoTime = raw.pickupTime ?? raw.deliveryTime ?? new Date().toISOString()
+  const { date, time12, hhmm } = parseFulfillmentTime(isoTime)
+  const dec    = raw.decimalDigits ?? 2
+  const factor = Math.pow(10, dec)
+  const totalCents    = raw.payment?.amount ?? raw.payments?.[0]?.amount ?? 0
+  const subTotalCents = totalCents - (raw.discountTotal ?? 0) - (raw.taxTotal ?? 0)
+  const rawPayStatus  = raw.payments?.[0]?.metadata?.status ?? ''
+
+  return {
+    id:            raw.channelOrderDisplayId,
+    created:       raw._created,
+    customer:      raw.customer.name,
+    customerPhone: raw.customer.phoneNumber ?? undefined,
+    customerEmail: raw.customer.email ?? undefined,
+    locationId:    raw.location,
+    locationName:  raw.locationName,
+    type:          raw.orderType === 1 ? 'Pickup' : 'Delivery',
+    date,
+    fulfillmentTime:     time12,
+    fulfillmentTimeHHMM: hhmm,
+    subTotal:      subTotalCents / factor,
+    discountTotal: (raw.discountTotal ?? 0) / factor,
+    discounts:     (raw.discounts ?? []).map(d => ({ name: d.name, type: d.type, amount: d.amount / factor })),
+    taxes:         (raw.taxes ?? []).map(t => ({ name: t.name, amount: t.total / factor })),
+    tip:           (raw.tip ?? 0) / factor,
+    deliveryCost:  (raw.deliveryCost ?? 0) / factor,
+    total:         totalCents / factor,
+    orderStatus:   V2_STATUS_MAP[raw.status] ?? 'Unknown',
+    paymentStatus: PAYMENT_STATUS_MAP[rawPayStatus] ?? rawPayStatus,
+    note:          raw.note ?? undefined,
+    flags:         {},
+    items: raw.items.map(item => ({
+      plu:       item.plu,
+      name:      item.name,
+      qty:       item.quantity,
+      unitPrice: item.price / factor,
+      category:  'Menu Items',
+      modifiers: flattenModifiers(item.subItems, item.quantity),
+      note:      (item as ApiItem & { remark?: string | null }).remark ?? undefined,
+    })),
+  }
+}
+
 // ── Locations ──────────────────────────────────────────────────────────────
 
 export const LOCATIONS: Location[] = [
@@ -301,4 +385,5 @@ export const ORDERS: Order[] = [
   transformApiOrder(order4Raw as unknown as ApiOrder),
   transformApiOrder(order5Raw as unknown as ApiOrder),
   transformApiOrder(order6Raw as unknown as ApiOrder),
+  transformApiOrderV2(order7Raw as unknown as ApiOrderV2),
 ]
