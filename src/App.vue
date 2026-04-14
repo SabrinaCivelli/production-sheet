@@ -69,7 +69,7 @@
               :class="{ 'nav-child--active': activeView === 'production-tools' }"
               @click="activeView = 'production-tools'"
             >
-              Production Tools
+              Operational Tools
             </button>
           </div>
         </div>

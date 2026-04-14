@@ -2,7 +2,7 @@
   <div class="page">
     <div class="content">
 
-      <h1>Operational Sheets</h1>
+      <h1>Operational Tools</h1>
 
       <div class="sections">
 
@@ -137,6 +137,7 @@
         <div class="section">
           <label class="section-label">Time Selection</label>
 
+          <!-- A/B test: service periods hidden
           <div class="sub-section">
             <p class="sub-label">Service Periods</p>
             <div class="toggle-group">
@@ -149,6 +150,7 @@
               >{{ meta.label }}</button>
             </div>
           </div>
+          -->
 
           <div class="sub-section">
             <p class="sub-label">Custom Time Range</p>
@@ -157,14 +159,14 @@
                 type="time"
                 v-model="customTimeFrom"
                 class="time-input"
-                :disabled="selectedPeriods.length > 0"
+                :disabled="false"
               />
               <span class="to-text">to</span>
               <input
                 type="time"
                 v-model="customTimeTo"
                 class="time-input"
-                :disabled="selectedPeriods.length > 0"
+                :disabled="false"
               />
             </div>
           </div>
@@ -183,12 +185,14 @@
           <button class="btn-secondary" @click="generate('pack')">
             Generate Pack Sheet
           </button>
-          <button class="btn-secondary" @click="generate('production-v2')">
-            Production Sheet v2
+          <button class="btn-primary" @click="generate('production-v2')">
+            Generate Production Sheet
           </button>
+          <!-- A/B test: v1 hidden
           <button class="btn-primary" @click="generate('production')">
             Generate Production Sheet
           </button>
+          -->
         </div>
 
       </div>
@@ -295,11 +299,12 @@ const selectedPeriods = ref<ServicePeriod[]>([])
 const customTimeFrom  = ref('')
 const customTimeTo    = ref('')
 
-function togglePeriod(p: ServicePeriod) {
-  const idx = selectedPeriods.value.indexOf(p)
-  if (idx === -1) selectedPeriods.value.push(p)
-  else selectedPeriods.value.splice(idx, 1)
-}
+// A/B test: hidden with service periods
+// function togglePeriod(p: ServicePeriod) {
+//   const idx = selectedPeriods.value.indexOf(p)
+//   if (idx === -1) selectedPeriods.value.push(p)
+//   else selectedPeriods.value.splice(idx, 1)
+// }
 
 // ── Location state ─────────────────────────────────────────────────────────
 
